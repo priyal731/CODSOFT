@@ -245,7 +245,7 @@ nav {
     }
 
     .hero {
-        flex-direction: column-reverse; /
+        flex-direction: column-reverse; 
         text-align: center;
         gap: 20px;
         padding: 20px 0 40px 0;
@@ -296,7 +296,6 @@ nav {
         gap: 20px;
     }
 }
-
 
 @media (max-width: 480px) {
     .quote { font-size: 1.8rem !important; }
