@@ -12,29 +12,34 @@
 
     <div class="portfolio-container">
         <nav>
-            <div class="brand-logo">PRIYAL<span>.K</span></div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="mailto:priyalkumari78910@gmail.com">Contact</a></li>
-            </ul>
-            <div class="social-icons">
-                <a href="https://github.com/priyal731" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="mailto:priyalkumari78910@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
-        </nav>
+    <div class="brand-logo">
+        <img src="profile.jpg" class="logo-pic" alt="Logo">
+        PRIYAL<span>.K</span>
+    </div>    
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="https://github.com/priyal731" target="_blank" class="nav-icon"><i class="fab fa-github"></i></a></li>
+        <li><a href="mailto:priyal.kr07@gmail.com" class="nav-icon"><i class="fas fa-envelope"></i></a></li>
+    </ul>
+</nav>
 
-        <main class="hero" id="home">
-            <div class="hero-image-wrapper">
-                <img src="c:\Users\VICTUS\Downloads\myprofile.jpeg" alt="Priyal Kumari" class="watercolor-portrait">
-            </div>
-
+        <main class="hero">
             <div class="hero-content">
-                <h1 class="quote">“Code is like humor. When you have to explain it, it’s bad.”</h1>
+                <h1 class="quote">Code is like humor.</h1>
+                <h1 class="quote-sub">When you have to explain it, it’s bad.</h1>
                 <p class="author">— Cory House</p>
                 
                 <div class="cta-group">
                     <a href="c:\Users\VICTUS\OneDrive\Documents\PRIYAL KUMARI-CV.docx" target="_blank" class="btn-main">View Resume</a>
+                    <a href="mailto:priyal.kr07@gmail.com" class="btn-secondary">Hire Me</a>
+                </div>
+            </div>
+
+            <div class="hero-image-wrapper">
+                <div class="image-border-glow">
+                    <img src="myprofile.jpeg" alt="Priyal Kumari" class="coder-profile-pic">
                 </div>
             </div>
         </main>
@@ -42,26 +47,69 @@
         <section id="about" class="section">
             <h2 class="section-title">About Me</h2>
             <div class="about-grid">
-                <p>I am a <strong>BCA student</strong> passionate about technology and software development. I am currently learning web development and building my skills in HTML, CSS, and JavaScript to create responsive and user-friendly websites. I enjoy exploring how web technologies work and applying my knowledge by developing small projects.</p>
+                <p>Hello! My name is <strong> Priyal Kumari</strong>. I am a <strong>BCA student</strong> passionate about technology and software development. I am currently learning web development and building my skills in HTML, CSS, and JavaScript to create responsive and user-friendly websites. I enjoy exploring how web technologies work and applying my knowledge by developing small projects.</p>
                 <p>In addition to web development, I am learning programming languages such as <strong>C, C++, and Java</strong> to strengthen my programming fundamentals and problem-solving abilities. My goal is to become a <strong>Full Stack Developer</strong> and work on both front-end and back-end technologies to build efficient web applications.</p>
             </div>
         </section>
 
+        <section id="skills" class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <ul class="skills-list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Node.js</li>
+                <li>C / C++</li>
+                <li>Java Basic </li>
+                <li>Python Basic</li>
+            </ul>
+
+        </section>
+        <section id="skills" class="section">
+            <h2 class="section-title">Soft Skills</h2>
+            <ul class="skills-list">
+                <li>Communication</li>
+                <li>Problem Solving</li>
+                <li>Teamwork</li>
+                <li>Time management</li>
+                <li>Quick Learner </li>
+               
+            </ul>
+        </section>
+
         <section id="projects" class="section">
             <h2 class="section-title">Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <div class="card-tag">Web App</div>
-                    <h3>Durotify</h3>
-                    <p>A YouTube Playlist Time Calculator built using Node.js, HTML, CSS, and JS.</p>
-                    <div class="project-links">
-                        <a href="https://duratiofy.onrender.com" target="_blank">Live Demo <i class="fas fa-external-link-alt"></i></a>
-                        <a href="https://github.com/priyal731" target="_blank">View Code</a>
-                    </div>
+            <div class="project-card">
+                <span class="card-tag">WEB APP</span>
+                <h3>Durotify</h3>
+                <p>A YouTube Playlist Time Calculator built using Node.js, HTML, CSS, and JS.</p>
+                <div class="project-links">
+                    <a href="https://duratiofy.onrender.com" target="_blank">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://github.com/priyal731/playlist-time-cal" target="_blank">View Code</a>
                 </div>
             </div>
         </section>
-    </div>
 
+         <footer class="footer">
+        <p>&copy; 2026 Priyal Kumari. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="https://github.com/priyal731" target="_blank">GitHub</a> |
+            <a href="mailto:priyal.kr07@gmail.com">Email</a>
+       </div>
+</footer>  
+    </div>
+    
 </body>
+
+<script>
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+    document.onkeydown = function(e) {
+        if (e.ctrlKey && (e.keyCode === 83 || e.keyCode === 85)) {
+            return false;
+        }
+    };
+</script>
+
 </html>
