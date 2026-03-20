@@ -1,26 +1,62 @@
-/* General Reset */
+/* --- Root Variables for Consitency --- */
+:root {
+    --bg-dark: #2e3b23;      /* Olive Green */
+    --gold: #d4af37;         /* Real Gold */
+    --gold-dim: #c1a030;    /* Muted Gold */
+    --cream: #f1e5ac;       /* Creamy Gold */
+    --text-faded: rgba(241, 229, 172, 0.7);
+    --border-light: rgba(212, 175, 55, 0.1);
+    
+    --serif: 'Playfair Display', serif;
+    --sans: 'Poppins', sans-serif;
+}
+
+/* --- General Reset & Baseline --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    background-color: #2e3b23; /* Dark Olive Green */
-    color: #f1e5ac; /* Creamy Gold */
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
+html {
+    scroll-behavior: smooth; /* Smooth Scrolling */
 }
 
-/* Header & Brand Identity */
+body {
+    background-color: var(--bg-dark);
+    color: var(--cream);
+    font-family: var(--sans);
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* --- Utilities --- */
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sub-title {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* --- Header & Brand Identity --- */
 header {
-    background: rgba(46, 59, 35, 0.98);
-    padding: 10px 5%;
+    background: rgba(46, 59, 35, 0.85); /* Semitransparent */
+    backdrop-filter: blur(10px); /* Frosted Glass Effect */
+    padding: 15px 5%;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    border-bottom: 1px solid var(--border-light);
 }
 
 .header-container {
@@ -32,23 +68,25 @@ header {
 .brand-identity {
     display: flex;
     align-items: center;
-    gap: 15px; 
+    gap: 12px; 
 }
 
 .circular-logo {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
-    border: 2px solid #d4af37;
+    border: 1px solid var(--border-light); /* Clean Border */
     object-fit: cover;
+    padding: 3px;
+    background: rgba(212, 175, 55, 0.05); /* Very subtle glow */
 }
 
 .brand-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #d4af37;
-    letter-spacing: 3px;
+    font-family: var(--serif);
+    font-size: 1.7rem;
+    font-weight: 400; /* Cleaner weight */
+    color: var(--gold);
+    letter-spacing: 4px;
     text-transform: uppercase;
 }
 
@@ -60,21 +98,23 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: #f1e5ac;
+    color: var(--cream);
     text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    transition: 0.3s;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+    opacity: 0.9;
 }
 
 nav ul li a:hover {
-    color: #d4af37;
+    color: var(--gold);
+    opacity: 1;
 }
 
-/* Hero Section */
+/* --- Hero Section --- */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(46, 59, 35, 0.6), rgba(46, 59, 35, 0.7)), 
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(46, 59, 35, 0.5)), 
                 url('https://images.pexels.com/photos/3762871/pexels-photo-3762871.jpeg?auto=compress&cs=tinysrgb&w=1600');
     background-size: cover;
     background-position: center;
@@ -82,119 +122,200 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 80px;
-}
-
-.sub-title {
-    color: #d4af37;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: 0.9rem;
-    display: block;
-    margin-bottom: 10px;
+    padding-top: 80px; /* Account for header */
 }
 
 .hero-content h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 4rem;
-    margin-bottom: 20px;
+    font-family: var(--serif);
+    font-size: clamp(2.5rem, 6vw, 4.2rem); /* Responsive typography */
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero-content h1 i {
+    font-style: italic;
+    color: var(--gold);
+}
+
+.hero-content p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: var(--text-faded);
+    font-size: 1.1rem;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
 }
 
 .cta-btn {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 15px 40px;
-    border: 1px solid #d4af37;
-    color: #d4af37;
+    padding: 14px 40px;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
-    transition: 0.4s;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: 0.4s ease;
 }
 
-.cta-btn:hover {
-    background: #d4af37;
-    color: #2e3b23;
+.ghost-btn {
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    background: transparent;
 }
 
-/* Product Section */
-.container {
-    width: 85%;
-    margin: 100px auto;
+.ghost-btn:hover {
+    background: var(--gold);
+    color: var(--bg-dark);
+}
+
+/* --- About/Philosophy Section --- */
+.about {
+    padding: 120px 0;
+    background: #2a3620; /* Slightly different tone */
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about h2 {
+    font-family: var(--serif);
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: var(--gold);
+    margin-bottom: 25px;
+}
+
+.about p {
+    color: var(--text-faded);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* --- Product Section --- */
+.products {
+    padding: 100px 0;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 
 .section-title h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    color: #d4af37;
+    font-family: var(--serif);
+    font-size: 2.8rem;
+    color: var(--gold);
+    font-weight: 400;
 }
 
 .gold-line {
-    width: 80px;
-    height: 2px;
-    background: #d4af37;
-    margin: 10px auto;
+    width: 60px;
+    height: 1.5px;
+    background: var(--gold);
+    margin: 15px auto;
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 40px;
 }
 
 .product-card {
-    background: rgba(255, 255, 255, 0.03);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    border: 1px solid rgba(212, 175, 55, 0.1);
-}
-
-.img-zoom {
+    background: transparent;
+    transition: 0.4s ease;
+    border-radius: 4px;
     overflow: hidden;
-    border-radius: 8px;
-    margin-bottom: 20px;
 }
 
-.img-zoom img {
+.img-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 380px;
+    border-radius: 4px;
+}
+
+.img-wrapper img {
     width: 100%;
-    height: 350px;
+    height: 100%;
     object-fit: cover;
-    transition: 0.5s;
+    transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth Zoom */
 }
 
 .product-card:hover img {
-    transform: scale(1.1);
+    transform: scale(1.08); /* Minimalist zoom */
+}
+
+.product-info {
+    padding: 25px 5px;
+    text-align: left;
 }
 
 .product-card h3 {
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 10px;
-    color: #d4af37;
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: var(--cream);
 }
 
-/* Banner */
+.product-info p {
+    font-size: 0.9rem;
+    color: var(--text-faded);
+    margin-bottom: 12px;
+}
+
+.price {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--gold);
+}
+
+/* --- Banner --- */
 .organic-banner {
-    height: 400px;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+    height: 350px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(46, 59, 35, 0.6)), 
                 url('https://images.pexels.com/photos/4041391/pexels-photo-4041391.jpeg?auto=compress&cs=tinysrgb&w=1260');
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; /* Parallax effect */
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 0 10%;
 }
 
-/* Footer */
+.banner-text h2 {
+    font-family: var(--serif);
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 10px;
+}
+
+.banner-text p {
+    font-size: 1rem;
+    color: rgba(241, 229, 172, 0.8);
+}
+
+/* --- Footer --- */
 footer {
-    padding: 50px;
+    padding: 60px 0;
     text-align: center;
+    background: rgba(0,0,0,0.1);
+    border-top: 1px solid var(--border-light);
+}
+
+footer p {
     font-size: 0.8rem;
-    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    opacity: 0.7;
+    letter-spacing: 1px;
 }
