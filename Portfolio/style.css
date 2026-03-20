@@ -6,6 +6,7 @@
     --grey: #4b5563;
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -228,7 +229,6 @@ nav {
 .footer { text-align: center; margin-top: 80px; padding-top: 30px; border-top: 1px solid #f1f5f9; font-size: 14px; }
 
 /* Responsive */
-/* --- Updated Responsive Section --- */
 @media (max-width: 850px) {
     body {
         padding: 10px; 
