@@ -60,6 +60,9 @@ body {
     filter: brightness(1.1);
 }
 
-.btn:active {
+.btn:active, .btn:focus {
+    background-color: #FCE4EC !important; 
     transform: scale(0.9);
+    outline: none;
+    transition: 0.1s ease; 
 }

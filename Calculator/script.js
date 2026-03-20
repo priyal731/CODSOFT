@@ -87,3 +87,37 @@ function calculate() {
     resetScreen = true;
     updateDisplay();
 }
+
+//Keyboard support
+
+document.addEventListener('keydown', (event) => {
+    const key = event.key;
+
+    
+    if (!isNaN(key) || key === '.') {
+        appendNumber(key);
+    }
+
+    
+    if (key === '+') setOperator('+');
+    if (key === '-') setOperator('-');
+    if (key === '*') setOperator('x');
+    if (key === '/') {
+        event.preventDefault(); 
+        setOperator('÷');
+    }
+
+    
+    if (key === 'Enter' || key === '=') {
+        event.preventDefault();
+        calculate();
+    }
+    
+    if (key === 'Backspace') {
+        deleteLast();
+    }
+
+    if (key === 'Escape') {
+        clearDisplay();
+    }
+});
