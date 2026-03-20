@@ -9,30 +9,38 @@
 <body>
 
     <div class="calculator">
-        <div class="display" id="display">0</div>
-        
-        <div class="buttons-grid">
-            <button class="btn btn-grey" onclick="clearDisplay()">C</button>
-            <button class="btn btn-grey" onclick="appendNumber('0')">0</button>
-            <button class="btn btn-grey" onclick="calculate()">=</button>
-            <button class="btn btn-pink" onclick="setOperator('÷')">÷</button>
-
-            <button class="btn btn-grey" onclick="appendNumber('7')">7</button>
-            <button class="btn btn-grey" onclick="appendNumber('8')">8</button>
-            <button class="btn btn-grey" onclick="appendNumber('9')">9</button>
-            <button class="btn btn-pink" onclick="setOperator('x')">×</button>
-
-            <button class="btn btn-grey" onclick="appendNumber('4')">4</button>
-            <button class="btn btn-grey" onclick="appendNumber('5')">5</button>
-            <button class="btn btn-grey" onclick="appendNumber('6')">6</button>
-            <button class="btn btn-pink" onclick="setOperator('-')">-</button>
-
-            <button class="btn btn-grey" onclick="appendNumber('1')">1</button>
-            <button class="btn btn-grey" onclick="appendNumber('2')">2</button>
-            <button class="btn btn-grey" onclick="appendNumber('3')">3</button>
-            <button class="btn btn-pink" onclick="setOperator('+')">+</button>
-        </div>
+    <div class="display">
+        <div id="op-view" style="font-size: 18px; color: #F8BBD0; min-height: 22px; text-align: right; margin-bottom: 5px;"></div>
+        <div id="display">0</div>
     </div>
+    
+   <div class="buttons-grid">
+    <button class="btn btn-pink" onclick="setOperator('x²')">x²</button>
+    <button class="btn btn-pink" onclick="setOperator('√')">√</button>
+    <button class="btn btn-pink" onclick="deleteLast()">DEL</button>
+    <button class="btn btn-pink" onclick="setOperator('÷')">÷</button>
+
+    <button class="btn btn-grey" onclick="appendNumber('7')">7</button>
+    <button class="btn btn-grey" onclick="appendNumber('8')">8</button>
+    <button class="btn btn-grey" onclick="appendNumber('9')">9</button>
+    <button class="btn btn-pink" onclick="setOperator('x')">×</button>
+
+    <button class="btn btn-grey" onclick="appendNumber('4')">4</button>
+    <button class="btn btn-grey" onclick="appendNumber('5')">5</button>
+    <button class="btn btn-grey" onclick="appendNumber('6')">6</button>
+    <button class="btn btn-pink" onclick="setOperator('-')">-</button>
+
+    <button class="btn btn-grey" onclick="appendNumber('1')">1</button>
+    <button class="btn btn-grey" onclick="appendNumber('2')">2</button>
+    <button class="btn btn-grey" onclick="appendNumber('3')">3</button>
+    <button class="btn btn-pink" onclick="setOperator('+')">+</button>
+
+    <button class="btn btn-grey" onclick="clearDisplay()">C</button>
+    <button class="btn btn-grey" onclick="appendNumber('0')">0</button>
+    <button class="btn btn-grey" onclick="appendNumber('.')">.</button>
+    <button class="btn btn-pink" onclick="calculate()">=</button>
+</div>
+</div>
 
     <script src="script.js"></script>
 </body>
